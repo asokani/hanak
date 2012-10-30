@@ -93,22 +93,168 @@ textarea {
    Author's custom styles
    ========================================================================== */
 
+header {
+    width:940px;
+    margin: 0 auto;
+    position: relative;
+    height: 137px;
+}
+
+nav {
+    width: 100%;
+    margin: 0 auto;
+    overflow:hidden;
+    position:relative;
+    z-index: 10;
+}
+nav ul {
+    clear:left;
+    float:left;
+    width: 100%;
+    list-style:none;
+    margin:25px 0 0 0;
+    padding:0;
+    position:relative;
+    left:50%;
+    text-align:center;
+}
+nav ul li {
+    display:block;
+    float:left;
+    list-style:none;
+    margin:0;
+    padding:0;
+    position:relative;
+    right:50%;
+    margin: 0 0 0 5px;
+}
+nav ul li a {
+    color: #333333;
+    font-size: 18px;
+    font-weight: normal;
+    text-decoration: none;
+    padding: 6px 10px;
+    text-transform: uppercase;
+    border-radius: 20px;
+    border: 1px solid #e7e7e7;
+    display: block;
+}
+nav ul li a:hover {
+    background:#369;
+    color:#fff;
+}
+nav ul li:nth-child(1),
+nav ul li:nth-child(2),
+nav ul li:nth-child(3) {
+    float: left;
+}
+nav ul li:nth-child(4),
+nav ul li:nth-child(5),
+nav ul li:nth-child(6) {
+    float: right;
+    margin-left: 10px;
+}
+header .logo {
+    position: absolute;
+    width: 100%;
+    height: 137px;
+    z-index: 5;
+    margin: 0;
+}
+header .logo a {
+    width: 301px;
+    margin: 0 auto;
+    height: 137px;
+    background: url(../images/hanka-koutna-logo.png) no-repeat;
+    overflow: hidden;
+    text-indent: 301px;
+    white-space: nowrap;
+    font-size: 12px;
+    z-index: 20;
+    display: block;
+    position: relative;
+    left: 16px;
+}
+
+.panel.main .shadow {
+    position: absolute;
+    bottom: 0;
+    height: 8px;
+    width: 100%;
+    background: url(../images/panel/bar-shadow.png) bottom center no-repeat;
+}
+
+.panel.main {
+    height: 483px;
+    position: relative;
+    background: url(../images/panel/uvod-1.jpg) center no-repeat;
+}
+
+.panel.bar {
+    background: url(../images/panel/title.jpg) center no-repeat;
+    height: 89px;
+    line-height: 78px;
+    color: white;
+    text-align: center;
+    font-size: 44px;
+}
 
 
+.panel.undertext {
+    color: #1a1a1a;
+    font-size: 16px;
+    width: 980px;
+    height: 129px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 10px 0 0 0;
+    position: relative;
 
+}
+.panel.undertext ul.switch {
+    position: absolute;
+    bottom: 30px;
+}
+ul.switch {
+    list-style-type: none;
+    clear:left;
+    float:left;
+    padding:0;
+    position:relative;
+    left:50%;
+    text-align:center;
 
+}
 
+ul.switch li {
+    float: left;
+    display:block;
+    list-style:none;
+    margin:0;
+    padding:0;
+    position:relative;
+    right:50%;
+    padding: 0 2px;
+}
 
+ul.switch li a {
+    width: 15px;
+    height: 15px;
+    display: block;
+    background: url(../images/circle.png) no-repeat;
+}
+ul.switch li.selected a {
+    background: url(../images/circle-selected.png) no-repeat;
+}
+.panel.gray {
+    background: url(../images/background-gray.png);
+    margin: 0 auto;
+    max-width: 1200px;
+}
 
-
-
-
-
-
-
-
-
-
+.panel.inner {
+    width: ;
+}
 /* ==========================================================================
    Helper classes
    ========================================================================== */
