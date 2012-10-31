@@ -203,13 +203,6 @@ header .logo a {
     left: 16px;
 }
 
-.panel.main .shadow {
-    position: absolute;
-    bottom: 0;
-    height: 8px;
-    width: 100%;
-    background: url(../images/panel/bar-shadow.png) bottom center no-repeat;
-}
 
 .panel.main {
     height: 483px;
@@ -218,12 +211,13 @@ header .logo a {
 }
 
 .panel.bar {
-    background-image: url(../images/panel/title.jpg);
+    background: url(../images/panel/title.jpg) top no-repeat;
     height: 90px;
-    line-height: 78px;
+    line-height: 70px;
     color: white;
     text-align: center;
     font-size: 44px;
+    position: relative;
 }
 
 
@@ -319,12 +313,14 @@ ul.switch li.selected a {
 .panel .third .content {
     padding: 0 10px;;
 }
+.gallery .image,
 .clients .image,
 .col .image {
     position: relative;
     float: left;
     left: 50%;
 }
+.gallery .image a,
 .clients .image a,
 .col .image a {
     display: block;
@@ -569,17 +565,6 @@ footer .author {
     color: #1a1a1a;
     height: 522px;
 }
-.aboutme h1 {
-    margin: 0;
-    font-weight: normal;
-    padding: 0;
-    text-align: center;
-    text-transform: uppercase;
-    font-size: 74px;
-}
-.aboutme .panel.inner {
-    padding-top: 20px;
-}
 .aboutme .strong {
     font-size: 24px;
 }
@@ -640,12 +625,15 @@ footer .author {
     padding: 10px 0;
     margin: 10px 0;
 }
+.gallery,
 .references {
     background: url(../images/background-squares.png) repeat-x;
 }
+.aboutme h1,
+.gallery h1,
 .references h1 {
     margin: 0;
-    padding: 50px 0 0;
+    padding: 20px 0 0;
     font-size: 74px;
     color: #1a1a1a;
     font-weight: normal;
@@ -661,6 +649,7 @@ footer .author {
     padding: 0 30px;
     margin: 0;
     text-align: center;
+    position: relative;
 }
 .references ul li:first-child strong {
     border: 0;
@@ -742,6 +731,91 @@ footer .author {
     margin: 0 auto;
     padding: 35px 0 50px;
 }
+.gallery h2 {
+    font-size: 28px;
+    color: #1a1a1a;
+    font-weight: normal;
+    padding: 30px  0 0 0;
+    margin: 0;
+    text-align: center;
+}
+.gallery ul {
+    list-style-type: none;
+    margin: 0 auto;
+    padding: 0;
+    width: 897px;
+}
+
+.gallery ul li {
+    float: left;
+    margin: 20px;
+}
+.gallery .panel.inner {
+    padding-top: 0;
+}
+.gallery .download span {
+    display: block;
+    background: url(../images/icon-download.png) 0px 4px no-repeat;
+    float: left;
+    position: relative;
+    left: -50%;
+    padding: 0 0 0 25px;
+    font-family: Arial;
+    color: #1a1a1a;
+    font-size: 16px;
+    text-decoration: none;
+
+}
+.gallery .download span em {
+    border-bottom: 1px solid #cccccc;
+    font-style: normal;
+}
+.gallery .download:hover span {
+    color: #e2292a;
+}
+.gallery .download:hover span em {
+    border-color: #e2292a;;
+}
+.gallery .download {
+    text-align: center;
+    display: block;
+    position: relative;
+    left: 50%;
+    float: left;
+    clear: both;
+    padding: 10px 0;
+
+}
+.player .panel.inner {
+    padding-top: 10px;
+}
+.player h2 {
+    font-weight: normal;
+    color: #1a1a1a;
+    font-size: 28px;
+    text-align: center;
+}
+
+.player .player {
+    padding: 10px;
+    width: 640px;
+    background: white;
+    margin: 0 auto;
+}
+.aboutme.bar.long {
+    height: 160px;
+}
+.aboutme.bar.long .shadow,
+.panel.bar .shadow {
+    position: absolute;
+    top: -8px;
+    height: 8px;
+    width: 100%;
+    background: url(../images/panel/bar-shadow.png) bottom center no-repeat;
+    z-index: 50;
+}
+
+
 /* ==========================================================================
    Helper classes
    ========================================================================== */
