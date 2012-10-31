@@ -92,7 +92,26 @@ textarea {
 /* ==========================================================================
    Author's custom styles
    ========================================================================== */
-
+@font-face {
+    font-family: 'BreeSerif-Regular';
+    src: url('../font/breeserif-regular.eot');
+    src: url('../font/breeserif-regular.eot?#iefix') format('embedded-opentype'),
+    url('../font/breeserif-regular.woff') format('woff'),
+    url('../font/breeserif-regular.ttf') format('truetype'),
+    url('../font/breeserif-regular.svg#breeserif-regular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+body {
+    font-family: 'BreeSerif-Regular';
+}
+input,
+.address,
+.text,
+.undertext,
+.more {
+    font-family: Arial;
+}
 header {
     width:940px;
     margin: 0 auto;
@@ -127,6 +146,12 @@ nav ul li {
     position:relative;
     right:50%;
     margin: 0 0 0 5px;
+
+}
+nav ul li.selected a {
+    color: #e2292a;
+    border-color: #e2292a;
+
 }
 nav ul li a {
     color: #333333;
@@ -140,8 +165,10 @@ nav ul li a {
     display: block;
 }
 nav ul li a:hover {
-    background:#369;
-    color:#fff;
+    color: #e2292a;
+}
+nav ul li:nth-child(1) {
+    margin-left: 0;
 }
 nav ul li:nth-child(1),
 nav ul li:nth-child(2),
@@ -187,12 +214,12 @@ header .logo a {
 .panel.main {
     height: 483px;
     position: relative;
-    background: url(../images/panel/uvod-1.jpg) center no-repeat;
+    background-image: url(../images/panel/uvod-1.jpg);
 }
 
 .panel.bar {
-    background: url(../images/panel/title.jpg) center no-repeat;
-    height: 89px;
+    background-image: url(../images/panel/title.jpg);
+    height: 90px;
     line-height: 78px;
     color: white;
     text-align: center;
@@ -246,14 +273,474 @@ ul.switch li a {
 ul.switch li.selected a {
     background: url(../images/circle-selected.png) no-repeat;
 }
-.panel.gray {
-    background: url(../images/background-gray.png);
+.black ul.switch li a {
+    background-image: url(../images/circle-black.png);
+}
+.black ul.switch li.selected a {
+    background-image: url(../images/circle-black-selected.png);
+}
+.red ul.switch li a {
+    background-image: url(../images/circle-red.png);
+}
+.red ul.switch li.selected a {
+    background-image: url(../images/circle-red-selected.png);
+}
+.panel {
     margin: 0 auto;
     max-width: 1200px;
+    min-width: 980px;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.panel.gray {
+    background: url(../images/background-gray.png);
+}
+.panel.black {
+    background: url(../images/background-black.png);
+}
+.panel.red {
+    background: url(../images/background-red.png);
 }
 
 .panel.inner {
-    width: ;
+    width: 960px;
+    padding: 45px 0;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.panel .col {
+    float: left;
+}
+
+.panel .third {
+    width: 33.33%;
+}
+.panel .third .content {
+    padding: 0 10px;;
+}
+.clients .image,
+.col .image {
+    position: relative;
+    float: left;
+    left: 50%;
+}
+.clients .image a,
+.col .image a {
+    display: block;
+    background: white;
+    padding: 10px;
+    margin: 0 auto;
+    position: relative;
+    float: left;
+    left: -50%;
+
+    -webkit-box-shadow: 0px 0px 20px 5px rgba(200, 200, 200, .5);
+    box-shadow: 0px 0px 20px 5px rgba(200, 200, 200, .5);
+}
+.col a.image img {
+    display: block;
+
+}
+
+.col .title {
+    color: black;
+    font-size: 24px;
+    padding: 30px 0 20px 0;
+    clear: both;
+    margin: 0;
+    text-align: center;
+}
+.col .title.underline {
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.col .text {
+    color: #1a1a1a;
+    font-size: 16px;
+    margin: 0 0 20px;
+    padding: 0;
+    text-align: center;
+}
+.col .more {
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+.col .more a {
+    color: #ec1f24;
+    font-size: 13px;
+    text-align: center;
+    font-style: italic;
+    text-decoration: none;
+    border-bottom: 1px solid #cccccc;
+}
+.col .more a:hover {
+    border-color: #ec1f24;
+}
+.panel .inner .switch {
+    margin-top: 30px;
+}
+.panel .inner .motto {
+    font-size: 44px;
+    color: #1a1a1a;
+    padding: 0 0 50px;
+    margin: 0;
+    text-align: center;
+}
+.panel .inner .motto:before {
+    content: "„";
+    color: #e5e5e5;
+    font-size: 60px;
+}
+.panel .inner .motto:after {
+    content: "“";
+    color: #e5e5e5;
+    font-size: 60px;
+}
+.contact .panel.inner {
+    width: 940px;
+}
+.contact .title {
+    font-size: 44px;
+    color: #1a1a1a;
+    padding: 0 0 45px;
+    margin: 0;
+    text-transform: uppercase;
+}
+.contact .col .title {
+    font-size: 24px;
+    text-align: left;
+    text-transform: none;
+}
+.contact .col:nth-child(2) {
+    width: 320px;
+}
+.contact .col:nth-child(3) {
+    width: 260px;
+}
+.contact .col:nth-child(4) {
+    width: 340px;
+    padding: 78px 0 0 20px;
+}
+textarea:focus,
+input:focus {
+    outline-width: 0;
+}
+.contact .input {
+    padding: 8px 10px;
+    border: 1px solid #cccccc;
+    border-radius: 3px;
+    background: white;
+    margin: 0 0 15px 0;
+    width: 230px;
+}
+.contact .input input {
+    border: none;
+    font-size: 16px;
+    width: 100%;
+}
+.contact .textarea {
+    padding: 8px 10px;
+    border: 1px solid #cccccc;
+    border-radius: 3px;
+    background: white;
+    margin: 0 0 15px 0;
+    height: 76px;
+}
+.contact .textarea textarea {
+    width: 100%;
+    border: none;
+    height: 100%;
+    font-size: 16px;
+}
+.contact .address {
+    font: 16px;
+    margin: 0;
+    color: #1a1a1a;
+    padding: 0;
+}
+.contact .address a {
+    color: #1a1a1a;
+    text-decoration: none;
+
+}
+.contact .submit {
+    float: right;
+}
+.contact .submit a {
+    display: block;
+    width: 127px;
+    height: 46px;
+    background: url(../images/send-button.png) no-repeat;
+    text-indent: 100%;
+    overflow: hidden;
+}
+.partners {
+    padding: 25px 0;
+}
+.partners .title {
+    margin:  0;
+    color: white;
+    font-size: 24px;
+    padding: 0;
+}
+.partners .panel.inner {
+    width: 940px;
+    padding: 0;
+}
+.partners ul.links {
+    padding: 0;
+    list-style-type: none;
+}
+.partners ul.links li:first-child {
+    margin: 0;
+
+}
+.partners ul.links li {
+    width: 200px;
+    padding: 0px 0;
+    border-radius: 5px;
+    margin: 0 0 0 46px;
+    float: left;
+    text-align: center;
+    background: white;
+}
+footer .logo {
+    background: url(../images/hanka-koutna-logo-footer.png) no-repeat;
+    width: 299px;
+    height: 59px;
+    text-indent: -999px;
+    overflow: hidden;
+    float: left;
+    display: block;
+}
+footer .right {
+    float: right;
+    width: 640px;
+    padding: 10px 0 0 0;
+}
+footer ul {
+    color: black;
+    font-size: 16px;
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+}
+footer ul li {
+    float: left;
+}
+footer ul li:after {
+    content: " / ";
+    display: block;
+    float: right;
+    padding: 0 5px;
+}
+footer ul li:last-child:after {
+    content: "";
+}
+footer ul li a {
+    color: black;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+footer ul li a:hover {
+    text-decoration: underline;
+}
+footer p.copy {
+    color: white;
+    font-size: 16px;
+    float: left;
+    margin: 0;
+    padding: 0;
+}
+footer .author {
+    float: right;
+    margin: 0;
+    padding: 0;
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.aboutme {
+    background: url(../images/about-me.png) top center no-repeat;
+    color: #1a1a1a;
+    height: 522px;
+}
+.aboutme h1 {
+    margin: 0;
+    font-weight: normal;
+    padding: 0;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 74px;
+}
+.aboutme .panel.inner {
+    padding-top: 20px;
+}
+.aboutme .strong {
+    font-size: 24px;
+}
+.aboutme .text {
+    font-size: 16px;
+}
+.aboutme div div {
+    margin-left: 490px;
+}
+.aboutme.bar {
+    background-image: url(../images/about-me-bar.png);
+}
+
+.aboutme.bar .portfolio {
+    font-size: 30px;
+    display: block;
+    text-decoration: none;
+    color: white;
+    margin: 0 auto;
+    text-align: left;
+    line-height: 24px;
+    padding: 12px 0 0 50px;
+    width: 280px;
+    background: url(../images/icon-portfolio.png) 0 16px no-repeat;
+}
+.aboutme.bar .portfolio span {
+    color: #1a1a1a;
+    font-size: 16px;
+}
+.about .inner {
+    padding: 45px 0 60px;
+}
+.about .col:nth-child(1) {
+    width: 380px;
+    margin: 0 0 0 10px;
+}
+.about .col:nth-child(2) {
+    width: 460px;
+    margin: 0 0 0 100px;
+}
+.about h2 {
+    color: #000000;
+    font-size: 44px;
+    margin: 0 0 35px;
+    padding: 0;
+    font-weight: normal;
+}
+.about p {
+    font-family: Arial;
+    color: #1a1a1a;
+    font-size: 16px;
+    margin: 10px 0;
+}
+.about p.lines {
+    font-size: 24px;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    padding: 10px 0;
+    margin: 10px 0;
+}
+.references {
+    background: url(../images/background-squares.png) repeat-x;
+}
+.references h1 {
+    margin: 0;
+    padding: 50px 0 0;
+    font-size: 74px;
+    color: #1a1a1a;
+    font-weight: normal;
+    text-transform: uppercase;
+    text-align: center;
+}
+.references ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+.references ul li {
+    padding: 0 30px;
+    margin: 0;
+    text-align: center;
+}
+.references ul li:first-child strong {
+    border: 0;
+}
+.references ul li strong {
+    padding: 20px 0 0;
+    margin: 0;
+    display: block;
+    font-size: 24px;
+    border-top: 1px solid #e5e5e5;
+}
+.references ul li p {
+    padding: 0;
+    margin: 20px 0 ;
+    font-size: 16px;
+}
+.testimonials.red {
+    background-image: url(../images/background-testimonials.png);
+    height: 382px;
+}
+.testimonials h2 {
+    margin: 0;
+    padding: 40px 0;
+    text-transform: uppercase;
+    font-size: 44px;
+    color: #1a1a1a;
+    text-align: center;
+}
+.testimonials .inner {
+    padding: 0;
+}
+.testimonials .text {
+    margin: 0 auto;
+    padding: 0;
+    color: white;
+    font-family: Arial;
+    font-size: 16px;
+    text-align: center;
+    width: 890px;
+}
+.testimonials .name {
+    margin: 0;
+    padding: 30px 0 0;
+    font-size: 24px;
+    color: #1a1a1a;
+    text-align: center;
+}
+.testimonials .position {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    font-size: 16px;
+    color: #1a1a1a;
+}
+.testimonials .switch {
+    margin: 25px 0 0 0;
+}
+.clients h2 {
+    margin: 0;
+    font-size: 44px;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: normal;
+    color: #1a1a1a;
+    padding: 40px 0 0 0;
+
+}
+.clients ul li.image a {
+    left: 0;
+}
+.clients ul li.image {
+    float: left;
+    padding: 10px;
+    left: 0;
+}
+.clients ul {
+    list-style-type: none;
+    width: 920px;
+    margin: 0 auto;
+    padding: 35px 0 50px;
 }
 /* ==========================================================================
    Helper classes
