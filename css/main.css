@@ -119,14 +119,14 @@ header {
     height: 137px;
 }
 
-nav {
+header nav {
     width: 100%;
     margin: 0 auto;
     overflow:hidden;
     position:relative;
     z-index: 10;
 }
-nav ul {
+header nav ul {
     clear:left;
     float:left;
     width: 100%;
@@ -137,7 +137,7 @@ nav ul {
     left:50%;
     text-align:center;
 }
-nav ul li {
+header nav ul li {
     display:block;
     float:left;
     list-style:none;
@@ -148,12 +148,12 @@ nav ul li {
     margin: 0 0 0 5px;
 
 }
-nav ul li.selected a {
+header nav ul li.selected a {
     color: #e2292a;
     border-color: #e2292a;
 
 }
-nav ul li a {
+header nav ul li a {
     color: #333333;
     font-size: 18px;
     font-weight: normal;
@@ -164,20 +164,20 @@ nav ul li a {
     border: 1px solid #e7e7e7;
     display: block;
 }
-nav ul li a:hover {
+header nav ul li a:hover {
     color: #e2292a;
 }
-nav ul li:nth-child(1) {
+header nav ul li:nth-child(1) {
     margin-left: 0;
 }
-nav ul li:nth-child(1),
-nav ul li:nth-child(2),
-nav ul li:nth-child(3) {
+header nav ul li:nth-child(1),
+header nav ul li:nth-child(2),
+header nav ul li:nth-child(3) {
     float: left;
 }
-nav ul li:nth-child(4),
-nav ul li:nth-child(5),
-nav ul li:nth-child(6) {
+header nav ul li:nth-child(4),
+header nav ul li:nth-child(5),
+header nav ul li:nth-child(6) {
     float: right;
     margin-left: 10px;
 }
@@ -313,6 +313,7 @@ ul.switch li.selected a {
 .panel .third .content {
     padding: 0 10px;;
 }
+.post .image,
 .gallery .image,
 .clients .image,
 .col .image {
@@ -320,6 +321,7 @@ ul.switch li.selected a {
     float: left;
     left: 50%;
 }
+.post .image a,
 .gallery .image a,
 .clients .image a,
 .col .image a {
@@ -625,10 +627,12 @@ footer .author {
     padding: 10px 0;
     margin: 10px 0;
 }
+.blog,
 .gallery,
 .references {
     background: url(../images/background-squares.png) repeat-x;
 }
+.blog h1,
 .aboutme h1,
 .gallery h1,
 .references h1 {
@@ -814,8 +818,193 @@ footer .author {
     background: url(../images/panel/bar-shadow.png) bottom center no-repeat;
     z-index: 50;
 }
+.blog {
+    position: relative;
+}
+.blog .submenu ul {
+    position: absolute;
+    background: url(../images/background-red.png);
+    border-radius: 8px;
+    left: 20px;
+    top: 45px;
+    padding: 0;
+    list-style-type: none;
+    margin: 0;
+    overflow: hidden;
+    -webkit-box-shadow: 0px 0px 20px 5px rgba(200, 200, 200, .5);
+    box-shadow: 0px 0px 20px 5px rgba(200, 200, 200, .5);
+    width: 210px;
+    z-index: 50;
+}
+.blog .panel.inner {
+    padding: 10px 0 0 0;
+    position: relative;
+    overflow: visible;
+}
 
+.blog .submenu li {
 
+    margin: 0;
+    z-index: 50;
+    background: url(../images/line-top.png) top repeat-x,
+        url(../images/line.png) bottom repeat-x;
+}
+.blog .submenu li:first-child {
+    background: url(../images/line.png) bottom repeat-x;
+}
+.blog .submenu li:first-child {
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+.blog .submenu li:last-child {
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+}
+.blog .submenu li:last-child {
+    background: url(../images/line-top.png) top repeat-x;
+}
+.blog .submenu li a {
+    padding: 15px 20px;
+    margin: 0;
+    display: block;
+    text-transform: uppercase;
+    color: white;
+    font-size: 20px;
+    text-decoration: none;
+
+}
+.blog .submenu li:hover {
+    background: url(../images/arrow-white.png) right no-repeat,
+        url(../images/background-black.png);
+}
+
+.blog .panel.post .panel.inner .post {
+    margin: 0 0 0 280px;
+    z-index: 10;
+    position: relative;
+}
+.panel.post h2 {
+    margin: 0;
+    padding: 0;
+}
+.panel.post h2 a {
+    text-decoration: none;
+    color: #1a1a1a;
+}
+.panel.post .image {
+    display: block;
+    margin: 25px 0;
+    left: 0;
+
+}
+.blog .panel.post {
+    padding: 35px 0;
+    overflow: hidden;
+}
+.blog .panel.post .image a {
+    left: 0;
+}
+.blog .panel.post:nth-child(3) {
+    padding-top: 10px;
+    background: url(../images/background-grayscale-bottom.png) bottom repeat-x;
+}
+.blog .panel.post:nth-child(4) {
+    background: url(../images/background-gray.png);
+}
+.blog .panel.post:nth-child(5) {
+    background: url(../images/background-grayscale-top.png) top repeat-x,
+        url(../images/background-grayscale-bottom.png) bottom repeat-x;
+}
+.blog .post .navigation {
+    margin: 80px 0 20px;
+}
+.blog .post .navigation .prev,
+.blog .post .navigation .next {
+    position: relative;
+    z-index: 50;
+    float: left;
+}
+.blog .post .navigation .next {
+    float: right;
+}
+.blog .post .navigation .next a,
+.blog .post .navigation .prev a {
+    color: #1a1a1a;
+    font-size: 16px;
+    position: relative;
+    font-family: Arial;
+    text-decoration: none;
+    border-bottom: 1px solid #cccccc;
+}
+.blog .post .navigation .next a:hover,
+.blog .post .navigation .prev a:hover {
+    border-color: #e2292a;
+    color: #e2292a;
+}
+.blog .post .navigation .next span,
+.blog .post .navigation .prev span {
+    color: #e2292a;
+}
+.blog .post .navigation nav {
+    position: absolute;
+    width: 100%;
+    z-index: 10;
+}
+.blog .post .navigation ul {
+    position: relative;
+    float: left;
+    left: 50%;
+    margin: 0;
+    top: -10px;
+    padding: 10px 0;
+    z-index: 10;
+    list-style-type: none;
+}
+
+.blog .post .navigation ul li {
+    float:left;
+    position: relative;
+    left: -50%;
+}
+.blog .post .navigation ul li a {
+    display: block;
+    font-size: 16px;
+    font-family: Arial;
+    color: #1a1a1a;
+    padding:  0 2px;
+    margin: 0 20px;
+    text-decoration: none;
+    border-bottom: 1px solid #cccccc;
+}
+.blog .post .navigation ul li.selected span {
+    color: white;
+    z-index: 50;
+    display: block;
+    font-size: 16px;
+    font-family: Arial;
+    position: relative;
+}
+.blog .post .navigation ul li.selected span.circle {
+    width: 30px;
+    height: 30px;
+    background: red;
+    position: absolute;
+    border-radius: 15px;
+    left: -9px;
+    top: -4px;
+    z-index: 10;
+    -webkit-box-shadow: 0px 0px 5px 3px rgba(200, 200, 200, .5);
+    box-shadow: 0px 0px 5px 3px rgba(200, 200, 200, .5);
+}
+.blog .post .navigation ul li.selected {
+    color: white;
+    padding:  0 2px;
+    margin: 0 20px;
+}
+.blog .post .navigation ul li a:hover {
+    border-color: #e2292a;
+    color: #e2292a;
+}
 /* ==========================================================================
    Helper classes
    ========================================================================== */
