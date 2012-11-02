@@ -564,24 +564,32 @@ footer .author {
     font-size: 16px;
 }
 
+.contactpage,
 .aboutme {
-    background: url(images/about-me.png) top center no-repeat;
+    background: url(images/background-boxes.jpg) top center no-repeat,
+        url(images/background-aboutme.jpg) bottom center no-repeat;
     color: #1a1a1a;
-    height: 522px;
 }
+.contactpage .strong,
 .aboutme .strong {
     font-size: 24px;
 }
 .aboutme .text {
     font-size: 16px;
 }
+.contactpage div div,
 .aboutme div div {
     margin-left: 490px;
 }
+.contactpage div div {
+    padding: 120px 0 180px 0;
+}
+.contact.bar,
 .aboutme.bar {
     background-image: url(images/about-me-bar.png);
 }
 
+.contact.bar .portfolio,
 .aboutme.bar .portfolio {
     font-size: 30px;
     display: block;
@@ -635,6 +643,7 @@ footer .author {
     background: url(images/background-squares.png) repeat-x;
 }
 .blog h1,
+.contactpage h1,
 .aboutme h1,
 .gallery h1,
 .references h1 {
@@ -694,7 +703,7 @@ footer .author {
     font-family: Arial;
     font-size: 16px;
     text-align: center;
-    width: 890px;
+    width: 920px;
 }
 .testimonials .name {
     margin: 0;
@@ -808,9 +817,11 @@ footer .author {
     background: white;
     margin: 0 auto;
 }
+.contactpage.bar.long,
 .aboutme.bar.long {
     height: 160px;
 }
+.contactpage.bar.long .shadow,
 .aboutme.bar.long .shadow,
 .panel.bar .shadow {
     position: absolute;
@@ -1136,6 +1147,31 @@ footer .author {
     font-size: 16px;
     color: #1a1a1a;
 }
+
+.contactpage div div a,
+p.text a {
+    color: #e2292a;
+    text-decoration: none;
+    border-bottom: 1px solid #cccccc;
+}
+.contactpage div div a:hover,
+p.text a:hover {
+    border-color: #e2292a;
+}
+.scroller {
+    overflow: hidden;
+    position: relative;
+}
+
+.scroller .screen {
+    position: relative;
+    left: 0;
+}
+
+.scroller.actions .screen {
+    padding: 15px 0;
+}
+
 /* ==========================================================================
    Helper classes
    ========================================================================== */

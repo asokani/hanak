@@ -11,7 +11,7 @@ get_header(); ?>
 
 <?php while ( have_posts() ) : the_post(); ?>
 
-	<?php if (!(is_home() || is_front_page())) { ?>
+	<?php if (is_home() || is_front_page()) { ?>
 		<?php get_template_part( 'main', 'page' ); ?>
 	<?php } else { ?>
 		<?php get_template_part( 'content', 'page' ); ?>

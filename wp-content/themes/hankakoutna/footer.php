@@ -14,8 +14,8 @@
                     <p class="title">Přímý kontakt</p>
                     <p class="address">
                         Hanka Koutna<br>
-                        Tel.: 602 611 170<br>
-                        Mail: <a href="">hanka.koutna@gmail.com</a><br>
+                        Tel.: 777 615 681<br>
+                        Mail: <a href="mailto:moderatorka@hankakoutna.cz">moderatorka@hankakoutna.cz</a><br>
                         <a href="">Facebook</a>
                     </p>
                 </div>
@@ -48,17 +48,17 @@
             <div class="panel inner clearfix">
                 <p class="title">Partneři</p>
                 <ul class="links">
-                    <li><a href=""><img src="<?php echo get_template_directory_uri(); ?>/images/partners/mohito.png" alt="Mohito" width="155"  height="57" /></a></li>
-                    <li><a href=""><img src="<?php echo get_template_directory_uri(); ?>/images/partners/bikram-yoga.png" alt="Bikram Yoga" width="106"  height="57" /></a></li>
-                    <li><a href=""><img src="<?php echo get_template_directory_uri(); ?>/images/partners/reserved.png" alt="Reserved" width="176"  height="57" /></a></li>
-                    <li><a href=""><img src="<?php echo get_template_directory_uri(); ?>/images/partners/cosmopolitan.png" alt="Cosmopolitan" width="130"  height="57" /></a></li>
-                </ul>
+                    <li><a href="#" onclick="return false;"><img src="<?php echo get_template_directory_uri(); ?>/images/partners/mohito.png" alt="Mohito" width="155"  height="57" /></a></li>
+                    <li><a href="#" onclick="return false;"><img src="<?php echo get_template_directory_uri(); ?>/images/partners/bikram-yoga.png" alt="Bikram Yoga" width="107"  height="57" /></a></li>
+                    <li><a href="#" onclick="return false;"><img src="<?php echo get_template_directory_uri(); ?>/images/partners/reserved.png" alt="Reserved" width="155"  height="57" /></a></li>
+                    <li><a href="#" onclick="return false;"><img src="<?php echo get_template_directory_uri(); ?>/images/partners/siluet.png" alt="Siluet" width="46"  height="57" /></a></li>
+                </ul><!--
                 <ul class="switch">
                     <li><a href=""></a></li>
                     <li class="selected"><a href=""></a></li>
                     <li><a href=""></a></li>
                     <li><a href=""></a></li>
-                </ul>
+                </ul>-->
             </div>
 
         </div>
@@ -85,6 +85,9 @@
     </div>
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
     <script>window.jQuery || document.write('<script src="<?php echo get_template_directory_uri(); ?>/js/vendor/jquery-1.8.2.min.js"><\/script>')</script>
+    <script src="<?php echo get_template_directory_uri(); ?>/js/vendor/greensock/plugins/CSSPlugin.min.js"></script>
+    <script src="<?php echo get_template_directory_uri(); ?>/js/vendor/greensock/easing/EasePack.min.js"></script>
+    <script src="<?php echo get_template_directory_uri(); ?>/js/vendor/greensock/TweenLite.min.js"></script>
     <script src="<?php echo get_template_directory_uri(); ?>/js/plugins.js"></script>
     <script src="<?php echo get_template_directory_uri(); ?>/js/main.js"></script>
 <?php wp_footer(); ?>		

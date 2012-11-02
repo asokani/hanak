@@ -41,7 +41,7 @@
         </h1>
         <nav>
             <ul>
-                <li><a href="/" title="Úvod">úvod</a></li>
+                <li <?php if ((is_home() || is_front_page())) echo 'class="selected"' ?>><a href="/" title="Úvod">úvod</a></li>
                 <li><a href="/par-slov" title="Pár slov">pár slov</a></li>
                 <li><a href="/reference" title="Reference">reference</a></li>
 

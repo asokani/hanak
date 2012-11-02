@@ -1,8 +1,8 @@
 <?php if (!(is_home() || is_front_page())) { ?>
 <div class="row subpage pebble1">
         <div>
-		<?php 
-		
+		<?php
+
 			the_content();
 		?>
 		<?php edit_post_link( __( 'Edit', 'twentyten' ), '<span class="edit-link">', '</span>' ); ?>
@@ -23,7 +23,7 @@
 </div>
 <div class="breadcrumb clearfix">
 	<ul>
-	<?php simple_breadcrumb(); ?> 
+	<?php simple_breadcrumb(); ?>
 	</ul>
 </div>
 <?php } ?>
