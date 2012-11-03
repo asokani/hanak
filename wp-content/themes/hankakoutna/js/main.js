@@ -74,6 +74,8 @@
       return $("header nav li:nth-child(6)").addClass("selected");
     } else if (window.location.href.search(/kontakt/) !== -1) {
       return $("header nav li:nth-child(4)").addClass("selected");
+    } else if (window.location.href.search(/\/category\//) !== -1) {
+      return $("header nav li:nth-child(5)").addClass("selected");
     }
   });
 
