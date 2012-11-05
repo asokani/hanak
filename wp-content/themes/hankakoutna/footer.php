@@ -19,29 +19,7 @@
                         <a href="">Facebook</a>
                     </p>
                 </div>
-                <div class="col">
-                    <p class="title">Poslat zprávu</p>
-                    <div class="input">
-                        <input type="text" />
-                    </div>
-                    <div class="input">
-                        <input type="text" />
-                    </div>
-                    <div>
-                        Povinné údaje *
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="textarea">
-                        <textarea>
-
-                        </textarea>
-                    </div>
-                    <div class="submit">
-                        <a href="">Odeslat</a>
-                    </div>
-
-                </div>
+                <?php echo do_shortcode('[contact-form-7 id="56" title="Kontakt"]'); ?>
             </div>
         </div>
         <div class="panel black partners">
@@ -85,6 +63,8 @@
     </div>
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
     <script>window.jQuery || document.write('<script src="<?php echo get_template_directory_uri(); ?>/js/vendor/jquery-1.8.2.min.js"><\/script>')</script>
+    <!-- allow onready part 2/2 -->
+    <script>(function($,d){$.each(readyQ,function(i,f){$(f)});$.each(bindReadyQ,function(i,f){$(d).bind("ready",f)})})(jQuery,document)</script>
     <script src="<?php echo get_template_directory_uri(); ?>/js/vendor/greensock/plugins/CSSPlugin.min.js"></script>
     <script src="<?php echo get_template_directory_uri(); ?>/js/vendor/greensock/easing/EasePack.min.js"></script>
     <script src="<?php echo get_template_directory_uri(); ?>/js/vendor/greensock/TweenLite.min.js"></script>

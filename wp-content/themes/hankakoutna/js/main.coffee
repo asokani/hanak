@@ -38,6 +38,29 @@ class ScrollView
     views.css("float", "left")
     views.show()
 
+class FormDescription
+  constructor: (element, text) ->
+    @element = element
+    @text = text
+    @element.val(text)
+    @element.css("color", "#999999")
+    this.bind_events()
+  bind_events: ->
+    @element.focus(this.focus)
+    @element.blur(this.blur)
+  blur: =>
+    if @element.val() == ""
+      @element.val(@text)
+      @element.css("color", "#999999")
+    else
+      @element.css("color", "#1a1a1a")
+  focus: =>
+    console.log(@element)
+    if @element.val() == @text
+      @element.val("")
+      @element.css("color", "#1a1a1a")
+
+
 $ ->
   $(".scroller").each((index, element) =>
     new ScrollView(element)
@@ -53,5 +76,22 @@ $ ->
     $("header nav li:nth-child(4)").addClass("selected")
   else if (window.location.href.search(/\/category\//) != -1)
     $("header nav li:nth-child(5)").addClass("selected")
+  else if (window.location.href.search(/\/blog\//) != -1)
+    $("header nav li:nth-child(5)").addClass("selected")
 
+  $("#comment-form a").click(->
+    $("#comment-form").submit()
+    return false
+  )
+
+  $(".post:last-child .post .navigation").show()
+
+
+  new FormDescription($("input[name=your-email]"), "Váš e-mail *")
+  new FormDescription($("input[name=your-name]"), "Vaše jméno *")
+  new FormDescription($("textarea[name=your-message]"), "Text *")
+
+  new FormDescription($("#comment-form input[name=email]"), "Váš e-mail *")
+  new FormDescription($("#comment-form input[name=author]"), "Vaše jméno *")
+  new FormDescription($("#comment-form .text textarea"), "Text *")
 

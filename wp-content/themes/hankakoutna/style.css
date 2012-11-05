@@ -414,10 +414,10 @@ ul.switch li.selected a {
 .contact .col:nth-child(2) {
     width: 320px;
 }
-.contact .col:nth-child(3) {
+.contact .wpcf7-form .col:nth-child(2) {
     width: 260px;
 }
-.contact .col:nth-child(4) {
+.contact .wpcf7-form .col:nth-child(3) {
     width: 340px;
     padding: 78px 0 0 20px;
 }
@@ -452,6 +452,9 @@ input:focus {
     height: 100%;
     font-size: 16px;
 }
+.contact .important {
+    font-family: Arial;
+}
 .contact .address {
     font: 16px;
     margin: 0;
@@ -467,13 +470,21 @@ input:focus {
 .contact .submit {
     float: right;
 }
-.comments .submit a,
-.contact .submit a {
+.comments .submit a {
     display: block;
     width: 127px;
     height: 46px;
     background: url(images/send-button.png) no-repeat;
     text-indent: 100%;
+    overflow: hidden;
+}
+.wpcf7-submit {
+    display: block;
+    width: 127px;
+    height: 46px;
+    background: url(images/send-button.png) no-repeat;
+    border: none;
+    text-indent: -999px;
     overflow: hidden;
 }
 .partners {
@@ -936,10 +947,10 @@ footer .author {
 .blog .post .navigation .next {
     position: relative;
     z-index: 50;
-    float: left;
+    float: right;
 }
 .blog .post .navigation .next {
-    float: right;
+    float: left;
 }
 .blog .post .navigation .next a,
 .blog .post .navigation .prev a {
@@ -1085,11 +1096,11 @@ footer .author {
     border: 1px solid #e6e6e6;
     clear: both;
 }
-.comments .comment .reaction:hover {
+.comments .comment .comment-reply-link:hover {
     border-color: #e2292a;
     color: #e2292a;
 }
-.comments .comment .reaction {
+.comments .comment .comment-reply-link {
     float: right;
     font-size: 20px;
     color: #e2292a;
@@ -1149,12 +1160,14 @@ footer .author {
 }
 
 .contactpage div div a,
+.text p a,
 p.text a {
     color: #e2292a;
     text-decoration: none;
     border-bottom: 1px solid #cccccc;
 }
 .contactpage div div a:hover,
+.text p a:hover,
 p.text a:hover {
     border-color: #e2292a;
 }
@@ -1170,6 +1183,12 @@ p.text a:hover {
 
 .scroller.actions .screen {
     padding: 15px 0;
+}
+
+div.wpcf7-response-output {
+    clear: both;
+    font-size: 12px;
+    font-family: Arial;
 }
 
 /* ==========================================================================

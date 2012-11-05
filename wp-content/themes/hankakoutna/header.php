@@ -27,6 +27,8 @@
     <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/normalize.css">
     <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/style.css">
     <script src="<?php echo get_template_directory_uri(); ?>/js/vendor/modernizr-2.6.2.min.js"></script>
+    <!-- allow onready part 1/2 -->
+    <script>(function(w,d,u){w.readyQ=[];w.bindReadyQ=[];function p(x,y){if(x=="ready"){w.bindReadyQ.push(y);}else{w.readyQ.push(x);}};var a={ready:p,bind:p};w.$=w.jQuery=function(f){if(f===d||f===u){return a}else{p(f)}}})(window,document)</script>
 	<?php
 	wp_head();
 ?>	

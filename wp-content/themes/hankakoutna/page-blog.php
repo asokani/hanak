@@ -1,15 +1,7 @@
 <?php
-/**
- * The main template file.
- *
- * This is the most generic template file in a WordPress theme
- * and one of the two required files for a theme (the other being style.css).
- * It is used to display a page when nothing more specific matches a query.
- * E.g., it puts together the home page when no home.php file exists.
- * Learn more: http://codex.wordpress.org/Template_Hierarchy
- *
- * @package WordPress
-  */
+/*
+Template Name: Blog
+*/
 
 get_header(); ?>
 
@@ -25,8 +17,14 @@ get_header(); ?>
                 <li><a href="/category/zajimavosti/" title="Zajímavosti">Zajímavosti</a></li>
             </ul>
         </div>
+		<?php
+			$paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
+			$args = array( 'post_type' => 'post', 'posts_per_page' => 3, 'paged' => $paged );
+			$wp_query = new WP_Query($args);
+		?>
         <?php if (have_posts()) { ?>
             <?php while (have_posts()) { the_post(); ?>
+
                 <div class="panel outer post">
                     <div class="panel inner clearfix">
                         <div class="post">
@@ -46,7 +44,9 @@ get_header(); ?>
                             <div class="text">
                                 <?php the_excerpt(); ?>
                             </div>
-                            <!--<div class="navigation clearfix">
+                            <?php ?>
+                            <div class="navigation clearfix" style="display: none;">
+                                <!--
                                 <nav>
                                     <ul>
                                         <li><a href="">1</a></li>
@@ -54,15 +54,17 @@ get_header(); ?>
                                         <li><a href="">3</a></li>
                                         <li><a href="">4</a></li>
                                     </ul>
-                                </nav>
-                                <div class="next">
-                                    <a href="">Další <span>&raquo;</span></a>
-                                </div>
-                                <div class="prev">
-                                    <a href=""><span>&laquo;</span> Předchozí</a>
-                                </div>
-                            </div>-->
+                                </nav>-->
 
+                                <div class="prev">
+
+                                    <?php previous_posts_link( 'Další <span>&raquo;</span>' ); ?>
+                                </div>
+                                <div class="next">
+                                    <?php next_posts_link( '<span>&laquo;</span> Předchozí' ); ?>
+                                </div>
+                            </div>
+                            <?php ?>
 
                         </div>
                     </div>
