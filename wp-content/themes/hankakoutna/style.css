@@ -340,7 +340,7 @@ ul.switch li.selected a {
     display: block;
 
 }
-
+.col .title a,
 .col .title {
     color: black;
     font-size: 24px;
@@ -348,6 +348,10 @@ ul.switch li.selected a {
     clear: both;
     margin: 0;
     text-align: center;
+}
+.col .title a {
+    padding: 0;
+    text-decoration: none;
 }
 .col .title.underline {
     border-bottom: 1px solid #e5e5e5;

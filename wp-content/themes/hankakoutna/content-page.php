@@ -1,29 +1,28 @@
-<?php if (!(is_home() || is_front_page())) { ?>
-<div class="row subpage pebble1">
-        <div>
-		<?php
+<?php
+/**
+ * The template for displaying all pages.
+ *
+ *
+ * @package WordPress
+ */
 
-			the_content();
-		?>
-		<?php edit_post_link( __( 'Edit', 'twentyten' ), '<span class="edit-link">', '</span>' ); ?>
-	</div>
-</div>
-<div class="row contact">
-	<div>
-		<div class="content">
-			<div class="clearfix">
-				<div class="centerfloat">
-					<a href="/kontakt" title="Kontaktujte nás" class="button blue"><span>Kontaktujte nás</span></a>
-				</div>
-			</div>
+?>
+<script type="text/javascript">
+    $(function() {$("header nav li:nth-child(1)").addClass("selected")})
+</script>
+<div id="main">
+        <div class="panel blog">
+            <h1 style="margin:0 auto;width: 940px;"><?php the_title(); ?></h1>
+            <div class="panel outer post">
+                <div class="panel inner clearfix">
+                    <div class="detail" style="margin:0;">
+                        <p class="date"> <?php the_date(); ?></p>
+                        <div class="text">
+                        <?php the_content(); ?>
+                        </div>
+                    </div>
 
-			<p class="action"><a href="mailto:oz@provident.cz" title="oz@provident.cz">oz@provident.cz</a> <span>844 744 644</span></p>
-		</div>
-	</div>
-</div>
-<div class="breadcrumb clearfix">
-	<ul>
-	<?php simple_breadcrumb(); ?>
-	</ul>
-</div>
-<?php } ?>
+                </div>
+            </div>
+        </div>
+

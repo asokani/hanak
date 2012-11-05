@@ -3,11 +3,10 @@
         </div>
         <div class="panel bar">
             <div class="shadow"></div>
-            Společenské akce
+            Dobrý den
         </div>
         <div class="panel undertext">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam vulputate libero<br>
-            pulvinar velit feugiat commodo. Ut sagittis condimentum facilisis.
+            Vítejte na mém webu. Věřím, že Vám přinese všechny potřebné informace<br>o mně coby moderátorce a prozradí i pár zajímavostí navíc.
             <ul class="switch">
                 <li><a href=""></a></li>
                 <li class="selected"><a href=""></a></li>
@@ -17,88 +16,117 @@
         </div>
         <div class="panel gray">
             <div class="panel inner clearfix">
+                <?php
+                    $recent_posts = wp_get_recent_posts(array(
+                        'numberposts' => 1,
+                        'category' => 4)
+                    );
+                    foreach( $recent_posts as $recent ) {
+                ?>
                 <div class="col third">
                     <div class="content">
+                        <?php
+                            $thumbnail = get_the_post_thumbnail($recent["ID"], array(239,126));
+                            if ($thumbnail) {
+                        ?>
                         <div class="image">
-                            <a href="">
-                                <img src="./images/demo/small1.jpg" width="239" height="126" title="" alt="" />
+                            <a href="<?php echo get_permalink($recent["ID"]) ?>">
+                                <?php echo $thumbnail; ?>
                             </a>
                         </div>
-                        <p class="title">kjdf kl a</p>
-                        <p class="text">kjfdsakj gfadklgd lkdasfj gaklj gkljfdasg lkfda</p>
+                        <?php } ?>
+                        <p class="title"><a href="<?php echo get_permalink($recent["ID"]) ?>"><?php echo esc_attr($recent["post_title"]) ?></a></p>
+                        <?php
+                            $page_object = get_page($recent["ID"]);
+                            $content = $page_object->post_content;
+                            $content = strip_tags($content);
+                        ?>
+                        <p class="text"><?php echo substr($content, 0, 80); ?>...</p>
                         <p class="more" >
-                            <a href="">podrobnosti</a>
+                            <a href="<?php echo get_permalink($recent["ID"]) ?>">podrobnosti</a>
                         </p>
                     </div>
                 </div>
+                <?php } ?>
+                <?php
+                    $recent_posts = wp_get_recent_posts(array(
+                        'numberposts' => 2,
+                        'category__not_in' => 4)
+                    );
+                    foreach( $recent_posts as $recent ) {
+                ?>
                 <div class="col third">
                     <div class="content">
+                        <?php
+                            $thumbnail = get_the_post_thumbnail($recent["ID"], array(239,126));
+                            if ($thumbnail) {
+                        ?>
                         <div class="image">
-                            <a href="">
-                                <img src="./images/demo/small2.jpg" width="239" height="126" title="" alt="" />
+                            <a href="<?php echo get_permalink($recent["ID"]) ?>">
+                                <?php echo $thumbnail; ?>
                             </a>
                         </div>
-                        <p class="title">kjdf kl a</p>
-                        <p class="text">kjfdsakj gfadklgd lkdasfj gaklj gkljfdasg lkfda</p>
+                        <?php } ?>
+                        <p class="title"><a href="<?php echo get_permalink($recent["ID"]) ?>"><?php echo esc_attr($recent["post_title"]) ?></a></p>
+                        <?php
+                            $page_object = get_page($recent["ID"]);
+                            $content = $page_object->post_content;
+                            $content = strip_tags($content);
+                        ?>
+                        <p class="text"><?php echo substr($content, 0, 80); ?>...</p>
                         <p class="more" >
-                            <a href="">podrobnosti</a>
+                            <a href="<?php echo get_permalink($recent["ID"]) ?>">podrobnosti</a>
                         </p>
                     </div>
                 </div>
-                <div class="col third">
-                    <div class="content">
-                        <div class="image">
-                            <a href="">
-                                <img src="./images/demo/small1.jpg" width="239" height="126" title="" alt="" />
-                            </a>
-                        </div>
-                        <p class="title">kjdf kl a</p>
-                        <p class="text">kjfdsakj gfadklgd lkdasfj gaklj gkljfdasg lkfda</p>
-                        <p class="more" >
-                            <a href="">podrobnosti</a>
-                        </p>
-                    </div>
-                </div>
+                <?php } ?>
             </div>
         </div>
         <div class="panel">
             <div class="panel inner clearfix">
                 <p class="motto">Můj život, víc než moderování</p>
-                <div class="col third">
-                    <div class="content">
-                        <div class="image">
-                            <a href="">
-                                <img src="./images/demo/square1.jpg" width="239" height="186" title="" alt="" />
-                            </a>
-                        </div>
-                        <p class="title underline">Cestování</p>
+                <div class="scroller actions" data-for="actions-switch">
+                    <div class="screen clearfix">
+                        <?php
+                            $posts = get_pages(array(
+                                    'child_of' => 5,
+                                    'sort_order' => 'ASC',
+                                    'sort_column' => 'menu_order',
+                                )
+                            );
+                            $post_counter = 0;
+                            foreach( $posts as $post ) {
+                              if ($post_counter % 3 == 0) {
+                                  if ($post_counter != 0) echo '</div>';
+                                  echo '<div class="view">';
+                              }
+                        ?>
+
+                            <div class="col third">
+                                <div class="content">
+                                    <?php
+                                    $thumbnail = get_the_post_thumbnail($post->ID, array(239,186));
+                                    if ($thumbnail) {
+                                        ?>
+                                        <div class="image">
+                                            <a href="<?php echo get_permalink($post->ID) ?>">
+                                                <?php echo $thumbnail; ?>
+                                            </a>
+                                        </div>
+                                    <?php } ?>
+                                    <p class="title underline"><a href="<?php echo get_permalink($post->ID) ?>"><?php echo esc_attr($post->post_title) ?></a></p>
+                                </div>
+                            </div>
+                        <?php
+                                $post_counter++;
+                            }
+                            echo '</div>';
+                        ?>
                     </div>
                 </div>
-                <div class="col third">
-                    <div class="content">
-                        <div class="image">
-                            <a href="">
-                                <img src="./images/demo/square2.jpg" width="239" height="186" title="" alt="" />
-                            </a>
-                        </div>
-                        <p class="title underline">Adrenalin</p>
-                    </div>
-                </div>
-                <div class="col third">
-                    <div class="content">
-                        <div class="image">
-                            <a href="">
-                                <img src="./images/demo/square1.jpg" width="239" height="186" title="" alt="" />
-                            </a>
-                        </div>
-                        <p class="title underline">Mateřství</p>
-                    </div>
-                </div>
-                <ul class="switch">
-                    <li><a href=""></a></li>
-                    <li class="selected"><a href=""></a></li>
-                    <li><a href=""></a></li>
-                    <li><a href=""></a></li>
+
+                <ul class="switch" id="actions-switch">
+
                 </ul>
             </div>
         </div>
