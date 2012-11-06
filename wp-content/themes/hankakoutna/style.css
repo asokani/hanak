@@ -207,11 +207,29 @@ header .logo a {
 .panel.main {
     height: 483px;
     position: relative;
-    background-image: url(images/panel/uvod-1.jpg);
+    background: url(images/background-boxes.jpg) top center repeat-x;
+}
+.panel.main div {
+    max-width: 1200px;
+    margin: 0 auto;
+    height: 483px;
+    background-position: bottom center;
+    background-repeat: no-repeat;
+    position: relative;
 }
 
+.panel.main div div.bottom,
+.panel.main div div.top {
+    position: absolute;
+    width: 100%;
+    z-index: 20;
+}
+.panel.main div div.bottom {
+    background-image: url(images/panel/1.jpg);
+    z-index: 10;
+}
 .panel.bar {
-    background: url(images/panel/title.jpg) top no-repeat;
+    background: url(images/about-me-bar.png) top repeat-x;
     height: 90px;
     line-height: 70px;
     color: white;
@@ -281,7 +299,7 @@ ul.switch li.selected a {
 }
 .panel {
     margin: 0 auto;
-    max-width: 1200px;
+    /*max-width: 1200px;*/
     min-width: 980px;
     background-position: center;
     background-repeat: no-repeat;
@@ -320,6 +338,17 @@ ul.switch li.selected a {
     position: relative;
     float: left;
     left: 50%;
+
+}
+.grayscale {
+    filter: grayscale(100%); /* Current draft standard */
+    -webkit-filter: grayscale(100%); /* New WebKit */
+    -moz-filter: grayscale(100%);
+    -ms-filter: grayscale(100%);
+    -o-filter: grayscale(100%); /* Not yet supported in Gecko, Opera or IE */
+    filter: url(resources.svg#desaturate); /* Gecko */
+    filter: gray; /* IE */
+    -webkit-filter: grayscale(1); /* Old WebKit */
 }
 .post .image a,
 .gallery .image a,
@@ -581,7 +610,7 @@ footer .author {
 
 .contactpage,
 .aboutme {
-    background: url(images/background-boxes.jpg) top center no-repeat,
+    background: url(images/background-boxes.jpg) top center repeat-x,
         url(images/background-aboutme.jpg) bottom center no-repeat;
     color: #1a1a1a;
 }
@@ -601,7 +630,7 @@ footer .author {
 }
 .contact.bar,
 .aboutme.bar {
-    background-image: url(images/about-me-bar.png);
+    background: url(images/about-me-bar.png) top center repeat-x;
 }
 
 .contact.bar .portfolio,
@@ -707,6 +736,8 @@ footer .author {
     font-size: 44px;
     color: #1a1a1a;
     text-align: center;
+
+    font-weight: normal;
 }
 .testimonials .inner {
     padding: 0;
@@ -915,6 +946,8 @@ footer .author {
 .panel.post h2 {
     margin: 0;
     padding: 0;
+
+    font-weight: normal;
 }
 .panel.post h2 a {
     text-decoration: none;
@@ -1039,6 +1072,8 @@ footer .author {
     padding: 0;
     color: #1a1a1a;
     font-size: 44px;
+
+    font-weight: normal;
 }
 .blog .panel.post .detail h3 {
     margin: 40px 0 20px;

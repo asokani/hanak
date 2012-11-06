@@ -76,15 +76,15 @@ get_header(); ?>
                         <p class="name">MUDr. Jan Cimický, CSc.</p>
                     </div>
                     <div class="view" style="display: none;">
-                        <p class="text">„Naše agentura spolupracuje s Hankou Koutnou již několik let. Její moderování je profesionální a  nelze mu nic vytknout. Vnáší do něj vtip a „drive“. Hanka nejen moderuje, ale umí improvizovat, což je v dnešní době hodně vzácná vlastnost moderátorů.“</p>
-                        <p class="name">Jaroslav Kratochvíl</p>
-                        <p class="position">ředitel agentury Sportainment</p>
-                    </div>
-                    <div class="view" style="display: none;">
                         <p class="text">„Hanka Koutná patří dlouhou dobu mezi nejoblíbenější a nejosvědčenější moderátorky značky Citroën. Rádi jejích služeb využíváme jak na promočních akcích v terénu, tak i na firemních večírcích naší společnosti. K jejím přednostem patří naprostá profesionalita, pohotovost, vtipné a zároveň kultivované moderování. Zvládá bravurně moderování jakéhokoliv typu akce. Určitě doporučujeme!“</p>
                         <p class="name">Zora Hájková</p>
                         <p class="position">Citroën marketing/event manager</p>
                     </div>
+                    <div class="view" style="display: none;">
+                        <p class="text">„Naše agentura spolupracuje s Hankou Koutnou již několik let. Její moderování je profesionální a  nelze mu nic vytknout. Vnáší do něj vtip a „drive“. Hanka nejen moderuje, ale umí improvizovat, což je v dnešní době hodně vzácná vlastnost moderátorů.“</p>
+                        <p class="name">Jaroslav Kratochvíl</p>
+                        <p class="position">ředitel agentury Sportainment</p>
+                    </div>         
                     <div class="view" style="display: none;">
                         <p class="text">„Akce Nakladatelství Fragment uvádí Hanka Koutná bezmála dva roky a za tu dobu jsme společně se zajímavými hosty pokřtili bezpočet knih. Vždy profesionální a milá spolupráce, ve které budeme rádi i nadále pokračovat.“</p>
                         <p class="name">Lucie Dvořáková</p>

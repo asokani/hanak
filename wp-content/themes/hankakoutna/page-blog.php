@@ -30,13 +30,13 @@ get_header(); ?>
                         <div class="post">
                             <h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
                             <?php
-                                $thumbnail = get_the_post_thumbnail($page->ID, array(640,270));
+                                $thumbnail = get_the_post_thumbnail($page->ID,  'widescreen-thumb');
                                 if ($thumbnail) {
                             ?>
                                     <div class="clearfix">
                                         <div class="image">
                                             <a href="<?php the_permalink(); ?>">
-                                                <?php echo get_the_post_thumbnail($page->ID, array(640,270)); ?>
+                                                <?php echo $thumbnail; ?>
                                             </a>
                                         </div>
                                     </div>

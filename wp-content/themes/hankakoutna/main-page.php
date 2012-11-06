@@ -1,17 +1,17 @@
 	<div id="main">
         <div class="panel main">
+            <div id="image-changer">
+                <div class="bottom"></div>
+                <div class="top"></div>
+            </div>
         </div>
         <div class="panel bar">
             <div class="shadow"></div>
-            Dobrý den
+            <span id="image-changer-title">Dobrý den</span>
         </div>
         <div class="panel undertext">
-            Vítejte na mém webu. Věřím, že Vám přinese všechny potřebné informace<br>o mně coby moderátorce a prozradí i pár zajímavostí navíc.
-            <ul class="switch">
-                <li><a href=""></a></li>
-                <li class="selected"><a href=""></a></li>
-                <li><a href=""></a></li>
-                <li><a href=""></a></li>
+            <span id="image-changer-text">Vítejte na mém webu. Věřím, že Vám přinese všechny potřebné informace<br>o mně coby moderátorce a prozradí i pár zajímavostí navíc.</span>
+            <ul class="switch" id="image-changer-switch">
             </ul>
         </div>
         <div class="panel gray">
@@ -105,7 +105,7 @@
                             <div class="col third">
                                 <div class="content">
                                     <?php
-                                    $thumbnail = get_the_post_thumbnail($post->ID, array(239,186));
+                                    $thumbnail = get_the_post_thumbnail($post->ID, "main-large-thumb");
                                     if ($thumbnail) {
                                         ?>
                                         <div class="image">

@@ -2,7 +2,9 @@
 if ( function_exists( 'add_theme_support' ) )
 {
 	add_theme_support( 'post-thumbnails' );
-	set_post_thumbnail_size( 640, 270, true);
+	set_post_thumbnail_size( 800,600, true);
+	add_image_size( 'main-large-thumb', 239, 186, true);
+	add_image_size( 'widescreen-thumb', 700, 9999);
 }
 
 add_filter('comment_form_default_fields', 'hanakoutna_comments');
