@@ -135,7 +135,17 @@
       this.text = $("#image-changer-text");
       this.make_switch();
       this.prepare_next();
+      this.preload();
     }
+
+    ImageChanger.prototype.preload = function() {
+      var index, _i, _results;
+      _results = [];
+      for (index = _i = 1; _i <= 6; index = ++_i) {
+        _results.push($('<img/>')[0].src = "/wp-content/themes/hankakoutna/images/panel/" + index + ".jpg");
+      }
+      return _results;
+    };
 
     ImageChanger.prototype.prepare_next = function() {
       return this.timeout = setTimeout(this.next, 1200);

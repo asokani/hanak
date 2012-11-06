@@ -98,6 +98,10 @@ class ImageChanger
     @text = $("#image-changer-text")
     this.make_switch()
     this.prepare_next()
+    this.preload()
+  preload: ->
+    for index in [1..6]
+      $('<img/>')[0].src = "/wp-content/themes/hankakoutna/images/panel/#{index}.jpg";
   prepare_next: ->
     @timeout = setTimeout(this.next, 1200)
   goto: (step) ->
