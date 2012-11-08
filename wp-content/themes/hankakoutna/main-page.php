@@ -1,6 +1,6 @@
 	<div id="main">
-        <div class="panel main">
-            <div id="image-changer">
+        <div class="panel main" style="overflow: hidden;">
+            <div id="image-changer" data-arrow-fix="0">
                 <div class="bottom"></div>
                 <div class="top"></div>
             </div>
@@ -14,40 +14,25 @@
             <ul class="switch" id="image-changer-switch">
             </ul>
         </div>
-        <div class="panel gray">
-            <div class="panel inner clearfix">
-                <?php
-                    $recent_posts = wp_get_recent_posts(array(
-                        'numberposts' => 1,
-                        'category' => 4)
-                    );
-                    foreach( $recent_posts as $recent ) {
-                ?>
+        <div class="panel gray" style="overflow: hidden;padding-top: 20px;">
+            <div class="panel inner clearfix" >
                 <div class="col third">
                     <div class="content">
-                        <?php
-                            $thumbnail = get_the_post_thumbnail($recent["ID"], array(239,126));
-                            if ($thumbnail) {
-                        ?>
+                        
                         <div class="image">
-                            <a href="<?php echo get_permalink($recent["ID"]) ?>">
-                                <?php echo $thumbnail; ?>
+                            <a href="http://www.hankakoutna.cz/uvod/ladies-movie-night/">
+                                <img src="http://www.hankakoutna.cz/wp-content/themes/hankakoutna/images/ladies.jpg">
                             </a>
                         </div>
-                        <?php } ?>
-                        <p class="title"><a href="<?php echo get_permalink($recent["ID"]) ?>"><?php echo esc_attr($recent["post_title"]) ?></a></p>
-                        <?php
-                            $page_object = get_page($recent["ID"]);
-                            $content = $page_object->post_content;
-                            $content = strip_tags($content);
-                        ?>
-                        <p class="text"><?php echo substr($content, 0, 80); ?>...</p>
+                        
+                        <p class="title"><a href="http://www.hankakoutna.cz/uvod/ladies-movie-night/">LADIES MOVIE NIGHT</a></p>
+                        
+                        <p class="text">Projekt, který oslovil stovky žen ...</p>
                         <p class="more" >
-                            <a href="<?php echo get_permalink($recent["ID"]) ?>">podrobnosti</a>
+                            <a href="http://www.hankakoutna.cz/uvod/ladies-movie-night/">podrobnosti</a>
                         </p>
                     </div>
                 </div>
-                <?php } ?>
                 <?php
                     $recent_posts = wp_get_recent_posts(array(
                         'numberposts' => 2,
@@ -83,7 +68,7 @@
             </div>
         </div>
         <div class="panel">
-            <div class="panel inner clearfix">
+            <div class="panel inner clearfix" data-arrow-fix="22">
                 <p class="motto">Můj život, víc než moderování</p>
                 <div class="scroller actions" data-for="actions-switch">
                     <div class="screen clearfix">

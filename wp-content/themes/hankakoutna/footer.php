@@ -15,28 +15,36 @@
                     <p class="address">
                         Hanka Koutna<br>
                         Tel.: 777 615 681<br>
-                        Mail: <a href="mailto:moderatorka@hankakoutna.cz">moderatorka@hankakoutna.cz</a><br>
-                        <a href="">Facebook</a>
+                        E-mail: <a href="mailto:moderatorka@hankakoutna.cz">moderatorka@hankakoutna.cz</a><br><br>
+                        <a href="http://www.facebook.com/HankaKoutnaModeratorka"><img src="http://www.hankakoutna.cz/wp-content/themes/hankakoutna/images/facebook.png" style="margin-right: 10px;" />Facebook</a>
                     </p>
                 </div>
                 <?php echo do_shortcode('[contact-form-7 id="56" title="Kontakt"]'); ?>
             </div>
         </div>
         <div class="panel black partners">
-            <div class="panel inner clearfix">
+            <div class="panel inner clearfix" data-arrow-fix="-6">
                 <p class="title">Partneři</p>
-                <ul class="links">
-                    <li><a href="#" onclick="return false;"><img src="<?php echo get_template_directory_uri(); ?>/images/partners/mohito.png" alt="Mohito" width="155"  height="57" /></a></li>
-                    <li><a href="#" onclick="return false;"><img src="<?php echo get_template_directory_uri(); ?>/images/partners/bikram-yoga.png" alt="Bikram Yoga" width="107"  height="57" /></a></li>
-                    <li><a href="#" onclick="return false;"><img src="<?php echo get_template_directory_uri(); ?>/images/partners/reserved.png" alt="Reserved" width="155"  height="57" /></a></li>
-                    <li><a href="#" onclick="return false;"><img src="<?php echo get_template_directory_uri(); ?>/images/partners/siluet.png" alt="Siluet" width="46"  height="57" /></a></li>
-                </ul><!--
-                <ul class="switch">
-                    <li><a href=""></a></li>
-                    <li class="selected"><a href=""></a></li>
-                    <li><a href=""></a></li>
-                    <li><a href=""></a></li>
-                </ul>-->
+                <div class="scroller" data-for="partners-switch">
+                    <div class="screen clearfix">
+                        <div class="view">
+                            <ul class="links">
+                                <li><a href="#" onclick="return false;"><img src="<?php echo get_template_directory_uri(); ?>/images/partners/mohito.png" alt="Mohito" width="155"  height="57" /></a></li>
+                                <li><a href="#" onclick="return false;"><img src="<?php echo get_template_directory_uri(); ?>/images/partners/bikram-yoga.png" alt="Bikram Yoga" width="107"  height="57" /></a></li>
+                                <li><a href="#" onclick="return false;"><img src="<?php echo get_template_directory_uri(); ?>/images/partners/reserved.png" alt="Reserved" width="155"  height="57" /></a></li>
+                                <li><a href="http://www.studio55.cz" onclick="return false;"><img src="<?php echo get_template_directory_uri(); ?>/images/partners/studio55.png" alt="Siluet" width="154"  height="57" /></a></li>
+                            </ul>
+                        </div>
+                        <div class="view">
+                            <ul class="links">
+                                <li><a href="#" onclick="return false;"><img src="<?php echo get_template_directory_uri(); ?>/images/partners/siluet.png" alt="Mohito" width="46"  height="57" /></a></li>
+                                <li><a href="http://www.netfinity.cz" onclick="return false;"><img src="<?php echo get_template_directory_uri(); ?>/images/partners/netfinity.png" alt="Siluet" width="125"  height="57" /></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <ul class="switch" id="partners-switch">
+                </ul>
             </div>
 
         </div>

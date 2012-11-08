@@ -66,7 +66,7 @@ get_header(); ?>
             </ul>
         </div>
     </div>
-    <div class="panel red testimonials">
+    <div class="panel red testimonials"  data-arrow-fix="0">
         <h2>Řekli o mně</h2>
         <div class="panel inner clearfix">
             <div class="scroller" data-for="testimonials-switch">

@@ -1,14 +1,74 @@
+class ScrollArrows
+  constructor: (element) ->
+    @main_element = $(element)
+    @element = @main_element.parent()
+
+    this.make_arrows()
+
+  arrow_click: (event) =>
+    @main_element.trigger("arrow_click", $(event.target).attr("data-direction"))
+    return false
+
+  make_arrows: ->
+    for direction in ["left", "right"]
+      arrow = $("<a>", {
+        "href": "#",
+        "data-direction": direction,
+        "css": {
+          "width": 37,
+          "height": 37,
+          "display": "block",
+          "position": "absolute",
+          "top": 0,
+          "z-index": 50
+        "background": "url(/wp-content/themes/hankakoutna/images/arrow.png) no-repeat"
+        }
+      })
+      arrow.css("top", @element.height() / 2 - 37 / 2 + parseInt(@element.attr("data-arrow-fix")))
+      if direction == "left"
+        arrow.css("left", -37 - if @element.width() == 940 then 20 else 10)
+        arrow.css("background-position", "0 -37px")
+      else
+        arrow.css("right", -37 - if @element.width() == 940 then 20 else 10)
+      arrow.click(this.arrow_click)
+      arrow.hover(this.mouse_over, this.mouse_out)
+      @element.append(arrow)
+  mouse_over: (event) ->
+    target = $(event.target)
+    if target.attr("data-direction") == "left"
+      target.css("background-position", "-37px -37px")
+    else
+      target.css("background-position", "-37px 0px")
+
+  mouse_out: (event) ->
+    target = $(event.target)
+    if target.attr("data-direction") == "left"
+      target.css("background-position", "0px -37px")
+    else
+      target.css("background-position", "0px 0px")
+
 class ScrollView
   constructor: (element) ->
     @element = $(element)
     this.make_scroller()
     this.make_switch()
+    @arrows = new ScrollArrows(@element)
+    @element.bind("arrow_click", this.arrow_click)
+    @current_page = 0
+  arrow_click: (event, direction) =>
+    if direction == "left" and @current_page > 0
+      this.goto(@current_page-1)
+    else if direction == "right" and @current_page < @max_page_index
+      this.goto(@current_page+1)
 
-  click: (event) =>
-    @switch_element.find("li").removeClass("selected")
+  switch_click: (event) =>
     target = $(event.target)
     index = target.attr("data-index")
-    target.parent().addClass("selected")
+    this.goto(index)
+  goto: (index) ->
+    @current_page = parseInt(index, 10)
+    @switch_element.find("li").removeClass("selected")
+    $(@switch_element.find("li")[index]).addClass("selected")
     TweenLite.to(@element.find(".screen"), .8, {
       "css": {
         "left": index*@width*(-1)
@@ -21,12 +81,13 @@ class ScrollView
     count = @element.find(".view").length
     id = @element.attr("data-for")
     @switch_element = $("#" + id)
-    for index in [0..(count-1)]
+    @max_page_index = count - 1
+    for index in [0.. @max_page_index]
       link = $("<a>", {
         "data-index": index,
         "href": "#"
       })
-      link.click(this.click)
+      link.click(this.switch_click)
       @switch_element.append($("<li>", {"class": (if index==0 then "selected" else "")}).append(link))
 
   make_scroller: () ->
@@ -55,7 +116,6 @@ class FormDescription
     else
       @element.css("color", "#1a1a1a")
   focus: =>
-    console.log(@element)
     if @element.val() == @text
       @element.val("")
       @element.css("color", "#1a1a1a")
@@ -99,11 +159,26 @@ class ImageChanger
     this.make_switch()
     this.prepare_next()
     this.preload()
+
+    @arrows = new ScrollArrows($("#image-changer div.bottom"))
+    $("#image-changer  div.bottom").bind("arrow_click", this.arrow_click)
+  arrow_click: (event, direction) =>
+    clearTimeout(@timeout)
+    if direction == "left" and @current > 0
+      next_step = @current - 1
+      if next_step < 1
+        next_step = 6
+    else if direction == "right" and @current <= 6
+      next_step = @current + 1
+      if next_step > 6
+        next_step = 1
+
+    this.goto(next_step)
   preload: ->
     for index in [1..6]
       $('<img/>')[0].src = "/wp-content/themes/hankakoutna/images/panel/#{index}.jpg";
   prepare_next: ->
-    @timeout = setTimeout(this.next, 1200)
+    @timeout = setTimeout(this.next, 1800)
   goto: (step) ->
     @current = step
     @switch_element.find("li").removeClass("selected")
@@ -125,12 +200,11 @@ class ImageChanger
   next: =>
     next_step = @current + 1
     if next_step > 6
-      next_step = 2
+      next_step = 1
     this.goto(next_step)
     this.prepare_next()
   make_switch: ->
     @switch_element = $("#image-changer-switch")
-    console.log(@switch_element)
     for index in [1..6]
       link = $("<a>", {
         "data-index": index,
@@ -151,7 +225,7 @@ $ ->
     new ScrollView(element)
   )
 
-  if /(\.cz)|(\.ps)\/$/.test(window.location.href)
+  if /((\.cz)|(\.ps))\/((#.*){0,1}|(\?.*){0,1})$/.test(window.location.href)
     new ImageChanger()
 
   if (window.location.href.search(/par-slov/) != -1)
@@ -187,7 +261,9 @@ $ ->
   $(".gallery .image a img").addClass("grayscale")
   $(".clients .image a img").addClass("grayscale")
   $(".col .image a img").addClass("grayscale")
+  $(".partners a img").addClass("grayscale")
 
   `$(".gallery .image a img").hover(function(event){$(event.target).removeClass("grayscale")}, function(event){$(event.target).addClass("grayscale")})`
   `$(".clients .image a img").hover(function(event){$(event.target).removeClass("grayscale")}, function(event){$(event.target).addClass("grayscale")})`
   `$(".col .image a img").hover(function(event){$(event.target).removeClass("grayscale")}, function(event){$(event.target).addClass("grayscale")})`
+  `$(".partners a img").hover(function(event){$(event.target).removeClass("grayscale")}, function(event){$(event.target).addClass("grayscale")})`

@@ -16,7 +16,6 @@
             <div class="panel outer post">
                 <div class="panel inner clearfix">
                     <div class="detail" style="margin:0;">
-                        <p class="date"> <?php the_date(); ?></p>
                         <div class="text">
                         <?php the_content(); ?>
                         </div>

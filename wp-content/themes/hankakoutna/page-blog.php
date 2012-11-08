@@ -28,6 +28,10 @@ get_header(); ?>
                 <div class="panel outer post">
                     <div class="panel inner clearfix">
                         <div class="post">
+                            <div class="blog-icons clearfix">
+                                <div class="date"><?php the_time(get_option('date_format')); ?></div>
+                                <div class="comments">komentářů: <?php echo get_comments_number() ?></div>
+                            </div>
                             <h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
                             <?php
                                 $thumbnail = get_the_post_thumbnail($page->ID,  'widescreen-thumb');

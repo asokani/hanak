@@ -163,6 +163,8 @@ header nav ul li a {
     border-radius: 20px;
     border: 1px solid #e7e7e7;
     display: block;
+    background-color: #f8f8f8;
+
 }
 header nav ul li a:hover {
     color: #e2292a;
@@ -200,17 +202,39 @@ header .logo a {
     z-index: 20;
     display: block;
     position: relative;
-    left: 16px;
+    left: 0px;
 }
-
+.blog-icons {
+    float: right;
+    margin-left: 100px;
+    font-family: Arial;
+    font-size: 16px;
+    color:#999999;
+    overflow: hidden;
+}
+.blog-icons .date {
+    height: 18px;
+    float: right;
+    padding: 0 20px 0 0;
+    background: url(images/icon-clock.png) right 3px  no-repeat;
+}
+.blog-icons .comments {
+    clear: both;
+    height: 18px;
+    float: right;
+    padding: 0px 20px 0 0;
+    margin: 5px 0 0;
+    background: url(images/icon-bubble-gray.png) bottom right no-repeat;
+}
 
 .panel.main {
     height: 483px;
+    min-width: inherit;
     position: relative;
     background: url(images/background-boxes.jpg) top center repeat-x;
 }
 .panel.main div {
-    max-width: 1200px;
+    width: 940px;
     margin: 0 auto;
     height: 483px;
     background-position: bottom center;
@@ -252,7 +276,7 @@ header .logo a {
 }
 .panel.undertext ul.switch {
     position: absolute;
-    bottom: 30px;
+    bottom: 20px;
 }
 ul.switch {
     list-style-type: none;
@@ -315,10 +339,17 @@ ul.switch li.selected a {
 }
 
 .panel.inner {
+    min-width: auto;
+    position: relative;
     width: 960px;
-    padding: 45px 0;
+    padding: 35px 0;
     margin: 0 auto;
-    overflow: hidden;
+    overflow: visible;
+}
+footer .panel.inner { 
+    width: 940px;
+    padding: 75px 0;
+
 }
 
 .panel .col {
@@ -362,8 +393,8 @@ ul.switch li.selected a {
     float: left;
     left: -50%;
 
-    -webkit-box-shadow: 0px 0px 20px 5px rgba(200, 200, 200, .5);
-    box-shadow: 0px 0px 20px 5px rgba(200, 200, 200, .5);
+    -webkit-box-shadow: 0px 0px 20px 5px rgba(150, 150, 150, .5);
+    box-shadow: 0px 0px 20px 5px rgba(150, 150, 150, .5);
 }
 .col a.image img {
     display: block;
@@ -415,7 +446,7 @@ ul.switch li.selected a {
 .panel .inner .motto {
     font-size: 44px;
     color: #1a1a1a;
-    padding: 0 0 50px;
+    padding: 0 0 30px;
     margin: 0;
     text-align: center;
 }
@@ -429,13 +460,14 @@ ul.switch li.selected a {
     color: #e5e5e5;
     font-size: 60px;
 }
+.blog .panel.inner,
 .contact .panel.inner {
     width: 940px;
 }
 .contact .title {
     font-size: 44px;
     color: #1a1a1a;
-    padding: 0 0 45px;
+    padding: 0 0 30px;
     margin: 0;
     text-transform: uppercase;
 }
@@ -594,19 +626,23 @@ footer ul li a:hover {
 }
 footer p.copy {
     color: white;
-    font-size: 16px;
+    font-size: 15px;
     float: left;
     margin: 0;
-    padding: 0;
+    padding: 3px 0 0;
+    font-family: arial;
 }
 footer .author {
     float: right;
+    font-size: 15px;
     margin: 0;
-    padding: 0;
+    padding: 3px 0 0;
     color: white;
     text-decoration: none;
     font-size: 16px;
+    font-family: arial;
 }
+
 
 .contactpage,
 .aboutme {
@@ -718,6 +754,7 @@ footer .author {
     margin: 0;
     display: block;
     font-size: 24px;
+    font-weight: normal;
     border-top: 1px solid #e5e5e5;
 }
 .references ul li p {
@@ -728,6 +765,7 @@ footer .author {
 .testimonials.red {
     background-image: url(images/background-testimonials.png);
     height: 382px;
+    background-position: center;
 }
 .testimonials h2 {
     margin: 0;
@@ -946,7 +984,6 @@ footer .author {
 .panel.post h2 {
     margin: 0;
     padding: 0;
-
     font-weight: normal;
 }
 .panel.post h2 a {
@@ -1221,7 +1258,8 @@ p.text a:hover {
 }
 
 .scroller.actions .screen {
-    padding: 15px 0;
+    padding: 25px 0 15px 0;
+
 }
 
 div.wpcf7-response-output {
@@ -1229,7 +1267,32 @@ div.wpcf7-response-output {
     font-size: 12px;
     font-family: Arial;
 }
-
+.alignleft,
+img.alignleft {
+	display: inline;
+	float: left;
+	margin-right: 24px;
+	margin-top: 4px;
+}
+.alignright,
+img.alignright {
+	display: inline;
+	float: right;
+	margin-left: 24px;
+	margin-top: 4px;
+}
+.aligncenter,
+img.aligncenter {
+	clear: both;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+img.alignleft,
+img.alignright,
+img.aligncenter {
+	margin-bottom: 12px;
+} 
 /* ==========================================================================
    Helper classes
    ========================================================================== */
