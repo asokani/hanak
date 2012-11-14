@@ -207,6 +207,7 @@ header .logo a {
 .blog-icons {
     float: right;
     margin-left: 100px;
+    margin-top: 10px;
     font-family: Arial;
     font-size: 16px;
     color:#999999;
@@ -253,7 +254,7 @@ header .logo a {
     z-index: 10;
 }
 .panel.bar {
-    background: url(images/about-me-bar.png) top repeat-x;
+    background: url(images/about-me-bar2.png) top repeat-x;
     height: 90px;
     line-height: 70px;
     color: white;
@@ -454,11 +455,15 @@ footer .panel.inner {
     content: "„";
     color: #e5e5e5;
     font-size: 60px;
+    margin-right: 10px;
+    font-family: georgia, arial;
 }
 .panel .inner .motto:after {
     content: "“";
     color: #e5e5e5;
     font-size: 60px;
+    margin-left: 10px;
+    font-family: georgia, arial;
 }
 .blog .panel.inner,
 .contact .panel.inner {
@@ -484,7 +489,7 @@ footer .panel.inner {
 }
 .contact .wpcf7-form .col:nth-child(3) {
     width: 340px;
-    padding: 78px 0 0 20px;
+    padding: 62px 0 0 20px;
 }
 textarea:focus,
 input:focus {
@@ -553,7 +558,7 @@ input:focus {
     overflow: hidden;
 }
 .partners {
-    padding: 25px 0;
+    padding: 20px 0 15px 0;
 }
 .partners .title {
     margin:  0;
@@ -593,7 +598,7 @@ footer .logo {
 }
 footer .right {
     float: right;
-    width: 640px;
+    width: 630px;
     padding: 10px 0 0 0;
 }
 footer ul {
@@ -639,12 +644,15 @@ footer .author {
     padding: 3px 0 0;
     color: white;
     text-decoration: none;
-    font-size: 16px;
     font-family: arial;
 }
 
 
-.contactpage,
+.contactpage {
+    background: url(images/background-boxes.jpg) top center repeat-x,
+        url(images/background-contact.jpg) bottom center no-repeat;
+    color: #1a1a1a;
+}
 .aboutme {
     background: url(images/background-boxes.jpg) top center repeat-x,
         url(images/background-aboutme.jpg) bottom center no-repeat;
@@ -662,7 +670,7 @@ footer .author {
     margin-left: 490px;
 }
 .contactpage div div {
-    padding: 120px 0 180px 0;
+    padding: 120px 0 140px 0;
 }
 .contact.bar,
 .aboutme.bar {
@@ -703,6 +711,7 @@ footer .author {
     margin: 0 0 35px;
     padding: 0;
     font-weight: normal;
+    line-height: 1;
 }
 .about p {
     font-family: Arial;
@@ -720,7 +729,7 @@ footer .author {
 .blog,
 .gallery,
 .references {
-    background: url(images/background-squares.png) repeat-x;
+    background: url(images/background-boxes.jpg) top center repeat-x;
 }
 .blog h1,
 .contactpage h1,
@@ -764,7 +773,7 @@ footer .author {
 }
 .testimonials.red {
     background-image: url(images/background-testimonials.png);
-    height: 382px;
+    height: 402px;
     background-position: center;
 }
 .testimonials h2 {
@@ -804,7 +813,7 @@ footer .author {
     color: #1a1a1a;
 }
 .testimonials .switch {
-    margin: 25px 0 0 0;
+    margin: 28px 0 0 0;
 }
 .clients h2 {
     margin: 0;
@@ -903,7 +912,7 @@ footer .author {
 }
 .contactpage.bar.long,
 .aboutme.bar.long {
-    height: 160px;
+    height: 90px;
 }
 .contactpage.bar.long .shadow,
 .aboutme.bar.long .shadow,
@@ -989,6 +998,7 @@ footer .author {
 .panel.post h2 a {
     text-decoration: none;
     color: #1a1a1a;
+    font-size: 28px;
 }
 .panel.post .image {
     display: block;
@@ -1258,13 +1268,16 @@ p.text a:hover {
 }
 
 .scroller.actions .screen {
-    padding: 25px 0 15px 0;
+    padding: 25px 0 25px 0;
 
 }
 
 div.wpcf7-response-output {
     clear: both;
     font-size: 12px;
+    font-family: Arial;
+}
+.wpcf7-not-valid-tip {
     font-family: Arial;
 }
 .alignleft,

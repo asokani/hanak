@@ -13,6 +13,55 @@ get_header(); ?>
             <ul class="clearfix">
                 <li class="clearfix">
                     <div class="image">
+                        <a href="<?php echo get_template_directory_uri(); ?>/images/gallery/gallery12.jpg" class="thickbox">
+                            <img src="<?php echo get_template_directory_uri(); ?>/images/gallery/gallery12_small.jpg" width="239" height="186" title="" alt="" />
+                        </a>
+                    </div>
+                    <a href="<?php echo get_template_directory_uri(); ?>/images/gallery/gallery12_large.jpg" class="download"><span><em>Stáhnout velké foto</em></span></a>
+                </li>
+                <li class="clearfix">
+                    <div class="image">
+                        <a href="<?php echo get_template_directory_uri(); ?>/images/gallery/gallery7.jpg" class="thickbox">
+                            <img src="<?php echo get_template_directory_uri(); ?>/images/gallery/gallery7_small.jpg" width="239" height="186" title="" alt="" />
+                        </a>
+                    </div>
+                    <a href="<?php echo get_template_directory_uri(); ?>/images/gallery/gallery7_large.jpg" class="download"><span><em>Stáhnout velké foto</em></span></a>
+                </li>
+                <li class="clearfix">
+                    <div class="image">
+                        <a href="<?php echo get_template_directory_uri(); ?>/images/gallery/gallery8.jpg" class="thickbox">
+                            <img src="<?php echo get_template_directory_uri(); ?>/images/gallery/gallery8_small.jpg" width="239" height="186" title="" alt="" />
+                        </a>
+                    </div>
+                    <a href="<?php echo get_template_directory_uri(); ?>/images/gallery/gallery8_large.jpg" class="download"><span><em>Stáhnout velké foto</em></span></a>
+                </li>
+                <li class="clearfix">
+                    <div class="image">
+                        <a href="<?php echo get_template_directory_uri(); ?>/images/gallery/gallery9.jpg" class="thickbox">
+                            <img src="<?php echo get_template_directory_uri(); ?>/images/gallery/gallery9_small.jpg" width="239" height="186" title="" alt="" />
+                        </a>
+                    </div>
+                    <a href="<?php echo get_template_directory_uri(); ?>/images/gallery/gallery9_large.jpg" class="download"><span><em>Stáhnout velké foto</em></span></a>
+                </li>
+                <li class="clearfix">
+                    <div class="image">
+                        <a href="<?php echo get_template_directory_uri(); ?>/images/gallery/gallery10.jpg" class="thickbox">
+                            <img src="<?php echo get_template_directory_uri(); ?>/images/gallery/gallery10_small.jpg" width="239" height="186" title="" alt="" />
+                        </a>
+                    </div>
+                    <a href="<?php echo get_template_directory_uri(); ?>/images/gallery/gallery10_large.jpg" class="download"><span><em>Stáhnout velké foto</em></span></a>
+                </li>
+                <li class="clearfix">
+                    <div class="image">
+                        <a href="<?php echo get_template_directory_uri(); ?>/images/gallery/gallery11.jpg" class="thickbox">
+                            <img src="<?php echo get_template_directory_uri(); ?>/images/gallery/gallery11_small.jpg" width="239" height="186" title="" alt="" />
+                        </a>
+                    </div>
+                    <a href="<?php echo get_template_directory_uri(); ?>/images/gallery/gallery11_large.jpg" class="download"><span><em>Stáhnout velké foto</em></span></a>
+                </li>
+
+                <li class="clearfix">
+                    <div class="image">
                         <a href="<?php echo get_template_directory_uri(); ?>/images/gallery/gallery1.jpg" class="thickbox">
                             <img src="<?php echo get_template_directory_uri(); ?>/images/gallery/gallery1_small.jpg" width="239" height="186" title="" alt="" />
                         </a>
@@ -74,8 +123,16 @@ get_header(); ?>
         </div>
     </div>-->
 
+    <div class="panel aboutme bar long">
+        <div class="shadow"></div>
+        <a href="http://www.hankakoutna.cz/wp-content/themes/hankakoutna/images/hanka-koutna-portfolio.pdf"  class="portfolio">
+            Portfolio ke stažení<br>
+            <span>ve formátu PDF</span>
+        </a>
+    </div>
+
     <div class="panel" style="overflow: hidden;">
-        <div class="panel inner clearfix" data-arrow-fix="86">
+        <div class="panel inner clearfix" data-arrow-fix="66">
             <p class="motto">Jaké je to na akcích</p>
             <div class="scroller actions" data-for="actions-switch">
                 <div class="screen clearfix">
@@ -105,13 +162,7 @@ get_header(); ?>
             </ul>
         </div>
     </div>
-    <div class="panel aboutme bar long">
-        <div class="shadow"></div>
-        <a href=""  class="portfolio">
-            Portfolio ke stažení<br>
-            <span>ve formátu PDF</span>
-        </a>
-    </div>
+    
 
 
 <?php get_footer(); ?>

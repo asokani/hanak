@@ -13,7 +13,7 @@ get_header(); ?>
                 <li><a href="/category/akce/" title="Akce">Akce</a></li>
                 <li><a href="/category/ladies-movie-night/" title="Ladies Movie Night">Ladies Movie Night</a></li>
                 <li><a href="/category/doporucuji/" title="Doporučuji">Doporučuji</a></li>
-                <li><a href="/category/rozesmalo-me/" title="Rozesmálo mě">Rozesmálo mě</a></li>
+                <li><a href="/category/pobavilo-me/" title="Pobavilo mě">Pobavilo mě</a></li>
                 <li><a href="/category/zajimavosti/" title="Zajímavosti">Zajímavosti</a></li>
             </ul>
         </div>

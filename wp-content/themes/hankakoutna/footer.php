@@ -15,7 +15,7 @@
                     <p class="address">
                         Hanka Koutna<br>
                         Tel.: 777 615 681<br>
-                        E-mail: <a href="mailto:moderatorka@hankakoutna.cz">moderatorka@hankakoutna.cz</a><br><br>
+                        E-mail: <a href="mailto:moderatorka@hankakoutna.cz">moderatorka@hankakoutna.cz</a><br><br><br>
                         <a href="http://www.facebook.com/HankaKoutnaModeratorka"><img src="http://www.hankakoutna.cz/wp-content/themes/hankakoutna/images/facebook.png" style="margin-right: 10px;" />Facebook</a>
                     </p>
                 </div>
@@ -29,16 +29,16 @@
                     <div class="screen clearfix">
                         <div class="view">
                             <ul class="links">
-                                <li><a href="#" onclick="return false;"><img src="<?php echo get_template_directory_uri(); ?>/images/partners/mohito.png" alt="Mohito" width="155"  height="57" /></a></li>
-                                <li><a href="#" onclick="return false;"><img src="<?php echo get_template_directory_uri(); ?>/images/partners/bikram-yoga.png" alt="Bikram Yoga" width="107"  height="57" /></a></li>
-                                <li><a href="#" onclick="return false;"><img src="<?php echo get_template_directory_uri(); ?>/images/partners/reserved.png" alt="Reserved" width="155"  height="57" /></a></li>
-                                <li><a href="http://www.studio55.cz" onclick="return false;"><img src="<?php echo get_template_directory_uri(); ?>/images/partners/studio55.png" alt="Siluet" width="154"  height="57" /></a></li>
+                                <li><a href="http://www.mohito.pl"><img src="<?php echo get_template_directory_uri(); ?>/images/partners/mohito.png" alt="Mohito" width="180"  height="57" /></a></li>
+                                <li><a href="http://www.bikramyoga.cz/"><img src="<?php echo get_template_directory_uri(); ?>/images/partners/bikram-yoga.png" alt="Bikram Yoga" width="180"  height="57" /></a></li>
+                                <li><a href="https://www.reserved.cz"><img src="<?php echo get_template_directory_uri(); ?>/images/partners/reserved.png" alt="Reserved" width="180"  height="57" /></a></li>
+                                <li><a href="http://www.studio55.cz"><img src="<?php echo get_template_directory_uri(); ?>/images/partners/studio55.png" alt="Studio 55" width="180"  height="57" /></a></li>
                             </ul>
                         </div>
                         <div class="view">
                             <ul class="links">
-                                <li><a href="#" onclick="return false;"><img src="<?php echo get_template_directory_uri(); ?>/images/partners/siluet.png" alt="Mohito" width="46"  height="57" /></a></li>
-                                <li><a href="http://www.netfinity.cz" onclick="return false;"><img src="<?php echo get_template_directory_uri(); ?>/images/partners/netfinity.png" alt="Siluet" width="125"  height="57" /></a></li>
+                                <li><a href="http://www.siluet.cz"><img src="<?php echo get_template_directory_uri(); ?>/images/partners/siluet.png" alt="Siluet" width="180"  height="57" /></a></li>
+                                <li><a href="http://www.netfinity.cz"><img src="<?php echo get_template_directory_uri(); ?>/images/partners/netfinity.png" alt="Netfinity" width="180"  height="57" /></a></li>
                             </ul>
                         </div>
                     </div>
@@ -79,5 +79,18 @@
     <script src="<?php echo get_template_directory_uri(); ?>/js/plugins.js"></script>
     <script src="<?php echo get_template_directory_uri(); ?>/js/main.js"></script>
 <?php wp_footer(); ?>		
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-36281019-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
 </body>
 </html>

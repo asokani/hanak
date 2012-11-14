@@ -21,7 +21,7 @@ get_header(); ?>
                 <li><a href="/category/akce/" title="Akce">Akce</a></li>
                 <li><a href="/category/ladies-movie-night/" title="Ladies Movie Night">Ladies Movie Night</a></li>
                 <li><a href="/category/doporucuji/" title="Doporučuji">Doporučuji</a></li>
-                <li><a href="/category/rozesmalo-me/" title="Rozesmálo mě">Rozesmálo mě</a></li>
+                <li><a href="/category/pobavilo-me/" title="Pobavilo mě">Pobavilo mě</a></li>
                 <li><a href="/category/zajimavosti/" title="Zajímavosti">Zajímavosti</a></li>
             </ul>
         </div>
@@ -50,7 +50,9 @@ get_header(); ?>
                             <div class="text">
                                 <?php the_excerpt(); ?>
                             </div>
-                            <!--<div class="navigation clearfix">
+                            <?php ?>
+                            <div class="navigation clearfix" style="display: none;">
+                                <!--
                                 <nav>
                                     <ul>
                                         <li><a href="">1</a></li>
@@ -58,14 +60,17 @@ get_header(); ?>
                                         <li><a href="">3</a></li>
                                         <li><a href="">4</a></li>
                                     </ul>
-                                </nav>
-                                <div class="next">
-                                    <a href="">Další <span>&raquo;</span></a>
-                                </div>
+                                </nav>-->
+
                                 <div class="prev">
-                                    <a href=""><span>&laquo;</span> Předchozí</a>
+
+                                    <?php previous_posts_link( 'Další <span>&raquo;</span>' ); ?>
                                 </div>
-                            </div>-->
+                                <div class="next">
+                                    <?php next_posts_link( '<span>&laquo;</span> Předchozí' ); ?>
+                                </div>
+                            </div>
+                            <?php ?>
 
 
                         </div>

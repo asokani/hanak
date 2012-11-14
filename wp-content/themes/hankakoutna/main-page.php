@@ -27,7 +27,7 @@
                         
                         <p class="title"><a href="http://www.hankakoutna.cz/uvod/ladies-movie-night/">LADIES MOVIE NIGHT</a></p>
                         
-                        <p class="text">Projekt, který oslovil stovky žen ...</p>
+                        <p class="text">Každý měsíc v Praze a Brně moderuji<br>filmovou show pro ženy...</p>
                         <p class="more" >
                             <a href="http://www.hankakoutna.cz/uvod/ladies-movie-night/">podrobnosti</a>
                         </p>

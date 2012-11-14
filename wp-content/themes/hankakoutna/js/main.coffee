@@ -128,11 +128,11 @@ class ImageChanger
     },
     {
       "title": "Společenské akce"
-      "text": "Společenské akce jsou jedinečnou příležitostí, jak noblesním a elegantním způsobem prezentovat společnost či firmu. Moderaci takových akcí sama vnímám jako společenskou událost na úrovni."
+      "text": "Společenské akce jsou jedinečnou příležitostí, jak noblesním a elegantním způsobem prezentovat společnost či firmu.<br>Moderaci takových akcí sama vnímám jako společenskou událost na úrovni"
     },
     {
       "title": "Sportovní akce"
-      "text": "Sport je mé druhé já. I proto si sportovní akce neskutečně užívám. Ráda moderuji v pohybu a vždy se snažím publiku předat kus své energie."
+      "text": "Sport je mé druhé já. I proto si sportovní akce neskutečně užívám.<br>Ráda moderuji v pohybu a vždy se snažím publiku předat kus své energie."
     },
     {
       "title": "Kulturní akce"
@@ -141,12 +141,12 @@ class ImageChanger
     },
     {
       "title": "Konference"
-      "text": "Každá konference vyžaduje perfektní přípravu, profesionální vystupování, naprostou koncentraci i dovednost umět hosty během náročného dne osvěžit vtipem. Tato vzájemná kombinace je pro mě coby moderátorku vždy výzvou a věřím, že i základem úspěšné konference."
+      "text": "Každá konference vyžaduje perfektní přípravu, profesionální vystupování, naprostou koncentraci i dovednost hosty během náročného dne osvěžit vtipem. Tato vzájemná kombinace je pro mě coby moderátorku vždy výzvou a věřím, že i základem úspěšné konference."
 
     },
     {
       "title":"Večírky"
-      "text": "Večírky mohou být opravdu různé. Profesionální moderátor je to, co by měly mít společné, má-li se předejít komplikacím. Moderace večírků pro mne znamená rozdávat radost, uvolnit atmosféru, udržovat zábavu a zároveň kvalitně a nenásilně prezentovat potřebná témata."
+      "text": "Večírky mohou být opravdu různé. Profesionální moderátor je to, co by měly mít společné. Moderace večírků pro mne znamená rozdávat radost, uvolnit atmosféru, udržovat zábavu a zároveň nenásilně prezentovat potřebná témata."
 
     }
   ]
