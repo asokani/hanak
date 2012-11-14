@@ -258,7 +258,7 @@
     };
 
     ImageChanger.prototype.prepare_next = function() {
-      return this.timeout = setTimeout(this.next, 1800);
+      return this.timeout = setTimeout(this.next, 4500);
     };
 
     ImageChanger.prototype.goto = function(step) {

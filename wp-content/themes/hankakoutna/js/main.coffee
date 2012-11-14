@@ -178,7 +178,7 @@ class ImageChanger
     for index in [1..6]
       $('<img/>')[0].src = "/wp-content/themes/hankakoutna/images/panel/#{index}.jpg";
   prepare_next: ->
-    @timeout = setTimeout(this.next, 1800)
+    @timeout = setTimeout(this.next, 4500)
   goto: (step) ->
     @current = step
     @switch_element.find("li").removeClass("selected")
